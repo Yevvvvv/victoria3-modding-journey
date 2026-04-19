@@ -1,4 +1,14 @@
 ﻿l_english:
+
+ ########################################
+ # STAGE 1 — LOCALIZATION & TEXT
+ # Started: April 19th 2026
+ ########################################
+
+ # --- 1.1 Country Names ---
+ # Renamed Russia and all dynamic variants to Russian transliterations
+ # Source: countries_l_english.yml and companies_l_english.yml
+
  RUS:0 "Rossiya"
  RUS_ADJ:0 "Rossiyane"
  dyn_c_rsfsr:0 "Rossiyskaya Sovetskaya Respublika"
@@ -10,5 +20,87 @@
  dyn_c_soviet_union:2 "Soyuz Sovetskikh Sotsialisticheskikh Respublik"
  dyn_c_soviet_union_adj:1 "Sovetsky"
  company_russian_american_company:0 "Rossiysko-Amerikanskaya Kompaniya"
- dyn_c_russian_american_company:0 "Rossiysko-Amerikanskaya Kompaniya"
- dyn_c_russian_american_company_adj:0 "Rossiysko-Amerikansky"
+
+ # --- 1.2 Goods & Resources ---
+ # Renamed all generic goods to Russian transliterations
+ # Left non-Russian prestige goods in their original language
+ # Source: goods_l_english.yml
+
+ ammunition:0 "Boyepripasy"
+ small_arms:0 "Strelkovoe Oruzhie"
+ radios:0 "Radiostantsii"
+ tanks:0 "Tanki"
+ artillery:0 "Artilleriya"
+ aeroplanes:0 "Aeroplany"
+ manowars:0 "Linery"
+ ironclads:0 "Bronenostsy"
+
+ dye:0 "Krasitel"
+ wool:0 "Sherst"
+ silk:0 "Shelk"
+ coal:0 "Ugol"
+ sulfur:0 "Sera"
+ iron:0 "Zhelezo"
+ wood:0 "Drevesina"
+ lead:0 "Svinets"
+ hardwood:0 "Tverdaya Drevesina"
+ rubber:0 "Kauchuk"
+ tools:0 "Instrumenty"
+ oil:0 "Neft"
+ gold:0 "Zoloto"
+ merchant_marine:0 "Torgovyy Flot"
+
+ steel:0 "Stal"
+ glass:0 "Steklo"
+ fertilizer:0 "Udobreniya"
+ explosives:0 "Vzryvchatka"
+ engines:0 "Dvigateli"
+ fabric:0 "Tkan"
+ paper:0 "Bumaga"
+ clippers:0 "Klipery"
+ steamers:0 "Parokhody"
+ electricity:0 "Elektrichestvo"
+ transportation:0 "Transport"
+
+ luxury_clothes:0 "Roskoshnaya Odezhda"
+ luxury_furniture:0 "Roskoshnaya Mebel"
+ porcelain:0 "Farfor"
+ literature:0 "Literatura"
+ tobacco:0 "Tabak"
+ tea:0 "Chay"
+ coffee:0 "Kofe"
+ opium:0 "Opium"
+ sugar:0 "Sakhar"
+ automobiles:0 "Avtomobili"
+ fine_art:0 "Izyashchnoe Iskusstvo"
+
+ grain:0 "Zerno"
+ fish:0 "Ryba"
+ meat:0 "Myaso"
+ fruit:0 "Frukty"
+ liquor:0 "Vodka"
+ wine:0 "Vino"
+ clothes:0 "Odezhda"
+ groceries:0 "Produkty"
+ furniture:0 "Mebel"
+ services:0 "Uslugi"
+
+ popneed_simple_clothing:0 "Prostaya Odezhda"
+ popneed_basic_food:0 "Osnovnoe Pitanie"
+ popneed_heating:0 "Otoplenie"
+ popneed_household_items:0 "Bytovye Tovary"
+ popneed_crude_items:0 "Grubiye Tovary"
+ popneed_standard_clothing:0 "Standartnaya Odezhda"
+ popneed_services:0 "Uslugi"
+ popneed_intoxicants:0 "Odurmanivayushchiye Veshchestva"
+ popneed_luxury_drinks:0 "Roskoshnye Napitki"
+ popneed_free_movement:0 "Svobodnoe Peredvizhenie"
+ popneed_communication:0 "Svyaz"
+ popneed_luxury_food:0 "Roskoshnoe Pitanie"
+ popneed_luxury_items:0 "Roskoshnye Tovary"
+ popneed_art:0 "Iskusstvo"
+ popneed_leisure:0 "Dosug"
+ popneed_stimulants:0 "Stimulyatory"
+
+ prestige_good_smirnoff_vodka:0 "Vodka Smirnova"
+ prestige_good_russia_iron:0 "Rossiyskoe Zhelezo"
