@@ -3,596 +3,776 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vic3 Mod Learning Tracker</title>
+<title>Rossiya Mod — Learning Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+:root {
+  --bg: #0c0a07;
+  --surface: #181410;
+  --surface2: #221e18;
+  --border: #3a2e1e;
+  --gold: #c9a84c;
+  --gold-dim: #7a6030;
+  --gold-light: #e8c96a;
+  --red: #8b1a1a;
+  --red-light: #c94040;
+  --green: #2a5e38;
+  --green-light: #4db86a;
+  --text: #ede0c8;
+  --text-dim: #9a8060;
+  --text-muted: #4e3e28;
+}
 
-  :root {
-    --bg: #0e0c0a;
-    --surface: #1a1612;
-    --surface2: #231f1a;
-    --border: #3a3028;
-    --gold: #c9a84c;
-    --gold-dim: #8a6f2e;
-    --gold-glow: #e8c96a;
-    --red: #8b2020;
-    --red-light: #c94040;
-    --green: #2a6b3a;
-    --green-light: #4a9b5a;
-    --text: #e8dcc8;
-    --text-dim: #9a8a72;
-    --text-muted: #5a4e3e;
-    --stage-colors: #c9a84c, #7a9bcf, #8fba7a, #cf8f7a, #a87acf, #cf7aab, #7acfcf, #cfba7a;
-  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 17px;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
+.ambient {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(139,26,26,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(201,168,76,0.06) 0%, transparent 50%);
+}
 
-  .bg-pattern {
-    position: fixed;
-    inset: 0;
-    background-image: 
-      radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 80%, rgba(139,32,32,0.06) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 0;
-  }
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  position: relative;
+  z-index: 1;
+}
 
-  .container {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-    position: relative;
-    z-index: 1;
-  }
+header {
+  text-align: center;
+  padding: 2rem 0 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
 
-  header {
-    text-align: center;
-    padding: 2.5rem 0 2rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 2.5rem;
-  }
+.orn { color: var(--gold-dim); font-size: 0.9rem; letter-spacing: 0.8em; display: block; margin-bottom: 0.6rem; }
 
-  .crown {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
 
-  h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.9rem;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-  }
+.sub { color: var(--text-dim); font-style: italic; font-size: 1rem; }
 
-  .subtitle {
-    color: var(--text-dim);
-    font-style: italic;
-    font-size: 1rem;
-  }
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
 
-  .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.8rem;
+  text-align: center;
+}
 
-  .stat {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1rem;
-    text-align: center;
-  }
+.stat-n {
+  font-family: 'Cinzel', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
 
-  .stat-num {
-    font-family: 'Cinzel', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--gold);
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
+.stat-l {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
 
-  .stat-label {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+.map-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1rem 0.75rem;
+  margin-bottom: 1.75rem;
+}
 
-  .progress-bar-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 2.5rem;
-  }
+.map-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
 
-  .progress-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
+.map-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
 
-  .progress-track {
-    height: 8px;
-    background: var(--surface2);
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
+.map-loc {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
 
-  .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--gold-dim), var(--gold));
-    border-radius: 4px;
-    transition: width 0.5s ease;
-  }
+.map-scroll { overflow-x: auto; }
 
-  .stage {
-    margin-bottom: 1.75rem;
-  }
+.stages-list { display: flex; flex-direction: column; gap: 0.6rem; }
 
-  .stage-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px 6px 0 0;
-    cursor: pointer;
-    user-select: none;
-  }
+.stage-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
 
-  .stage-header:hover {
-    border-color: var(--gold-dim);
-  }
+.stage-card.is-active { border-color: var(--red); }
+.stage-card.is-done { border-color: var(--gold-dim); }
 
-  .stage-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+.stage-hdr {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
 
-  .stage-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    flex: 1;
-  }
+.stage-hdr:hover { background: var(--surface2); }
 
-  .stage-progress {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    font-style: italic;
-  }
+.s-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  min-width: 1.2rem;
+}
 
-  .stage-chevron {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    transition: transform 0.2s;
-  }
+.s-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
-  .stage.collapsed .stage-chevron {
-    transform: rotate(-90deg);
-  }
+.s-info { flex: 1; }
 
-  .stage-body {
-    border: 1px solid var(--border);
-    border-top: none;
-    border-radius: 0 0 6px 6px;
-    overflow: hidden;
-  }
+.s-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+}
 
-  .stage.collapsed .stage-body {
-    display: none;
-  }
+.s-city {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
 
-  .task {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 0.85rem 1rem;
-    border-bottom: 1px solid var(--border);
-    cursor: pointer;
-    transition: background 0.15s;
-  }
+.s-prog {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-style: italic;
+  white-space: nowrap;
+}
 
-  .task:last-child { border-bottom: none; }
-  .task:hover { background: var(--surface2); }
+.s-chev {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  transition: transform 0.2s;
+}
 
-  .task-check {
-    width: 20px;
-    height: 20px;
-    border: 1.5px solid var(--border);
-    border-radius: 3px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    background: var(--surface);
-  }
+.stage-card.collapsed .s-chev { transform: rotate(-90deg); }
+.stage-card.collapsed .stage-body { display: none; }
 
-  .task.done .task-check {
-    background: var(--green);
-    border-color: var(--green-light);
-  }
+.stage-body { border-top: 1px solid var(--border); }
 
-  .task.done .task-check::after {
-    content: '✓';
-    color: #a0f0b0;
-    font-size: 13px;
-    font-weight: bold;
-  }
+.task-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.12s;
+}
 
-  .task-num {
-    font-family: 'Cinzel', serif;
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    min-width: 1.5rem;
-    margin-top: 3px;
-  }
+.task-row:last-child { border-bottom: none; }
+.task-row:hover { background: var(--surface2); }
 
-  .task-text {
-    flex: 1;
-    font-size: 1rem;
-    color: var(--text);
-  }
+.t-box {
+  width: 17px; height: 17px;
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  transition: all 0.2s;
+  background: var(--surface);
+}
 
-  .task.done .task-text {
-    color: var(--text-muted);
-    text-decoration: line-through;
-    text-decoration-color: var(--text-muted);
-  }
+.task-row.done .t-box { background: var(--green); border-color: var(--green-light); color: #a0f0b0; }
 
-  .task-date {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-style: italic;
-    white-space: nowrap;
-    margin-top: 3px;
-  }
+.t-num {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  min-width: 1.5rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
 
-  .notes-section {
-    margin-top: 2.5rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-  }
+.t-inner { flex: 1; }
 
-  .notes-header {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid var(--border);
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+.t-text { font-size: 0.95rem; color: var(--text); }
+.task-row.done .t-text { color: var(--text-muted); text-decoration: line-through; text-decoration-color: var(--text-muted); }
 
-  textarea {
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: var(--text);
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    padding: 1rem;
-    resize: vertical;
-    min-height: 120px;
-    outline: none;
-  }
+.t-date { font-size: 0.7rem; color: var(--text-muted); font-style: italic; margin-top: 1px; }
 
-  textarea::placeholder { color: var(--text-muted); font-style: italic; }
+.notes-card {
+  margin-top: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
 
-  .reset-btn {
-    margin-top: 1.5rem;
-    background: none;
-    border: 1px solid var(--red);
-    color: var(--red-light);
-    font-family: 'Cinzel', serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
+.notes-hdr {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
 
-  .reset-btn:hover {
-    background: var(--red);
-    color: #fff;
-  }
+textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 0.85rem 1rem;
+  resize: vertical;
+  min-height: 90px;
+  outline: none;
+}
 
-  footer {
-    text-align: center;
-    margin-top: 3rem;
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 0.9rem;
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-  }
+textarea::placeholder { color: var(--text-muted); font-style: italic; }
+
+.foot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+footer { color: var(--text-muted); font-style: italic; font-size: 0.85rem; }
+
+.reset-btn {
+  background: none;
+  border: 1px solid var(--red);
+  color: var(--red-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover { background: var(--red); color: #fff; }
+
+@keyframes bob {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-5px); }
+}
+
+@keyframes ripple {
+  0%   { r: 24; opacity: 0.4; }
+  100% { r: 38; opacity: 0; }
+}
 </style>
 </head>
 <body>
-<div class="bg-pattern"></div>
-<div class="container">
+<div class="ambient"></div>
+<div class="wrap">
 
-  <header>
-    <span class="crown">♛</span>
-    <h1>Victoria 3 Mod Curriculum</h1>
-    <p class="subtitle">From country names to custom nations — a modder's journey</p>
-  </header>
+<header>
+  <span class="orn">✦ &nbsp; ✦ &nbsp; ✦</span>
+  <h1>Rossiya Mod</h1>
+  <p class="sub">A modder's journey from Moscow to Vladivostok</p>
+</header>
 
-  <div class="stats-bar">
-    <div class="stat">
-      <span class="stat-num" id="stat-done">0</span>
-      <span class="stat-label">Completed</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num" id="stat-remain">33</span>
-      <span class="stat-label">Remaining</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num" id="stat-pct">0%</span>
-      <span class="stat-label">Progress</span>
-    </div>
-  </div>
-
-  <div class="progress-bar-wrap">
-    <div class="progress-label">
-      <span>Overall Progress</span>
-      <span id="prog-label">0 / 33 lessons</span>
-    </div>
-    <div class="progress-track">
-      <div class="progress-fill" id="prog-fill" style="width: 0%"></div>
-    </div>
-  </div>
-
-  <div id="stages"></div>
-
-  <div class="notes-section">
-    <div class="notes-header">&#9998; Field Notes</div>
-    <textarea id="notes" placeholder="Record discoveries, errors you solved, things to remember..."></textarea>
-  </div>
-
-  <button class="reset-btn" onclick="resetAll()">Reset all progress</button>
-
-  <footer>Progress is saved automatically in your browser &middot; Developed with Claude</footer>
+<div class="stats-row">
+  <div class="stat"><span class="stat-n" id="sn-done">0</span><span class="stat-l">Completed</span></div>
+  <div class="stat"><span class="stat-n" id="sn-left">34</span><span class="stat-l">Remaining</span></div>
+  <div class="stat"><span class="stat-n" id="sn-stage">I</span><span class="stat-l">Current Stage</span></div>
+  <div class="stat"><span class="stat-n" id="sn-pct">0%</span><span class="stat-l">Progress</span></div>
 </div>
 
+<div class="map-card">
+  <div class="map-topbar">
+    <span class="map-label">&#9770; Journey Map — Rossiyskaya Imperiya</span>
+    <span class="map-loc" id="map-loc-label">Moskva Oblast — Stage I</span>
+  </div>
+  <div class="map-scroll">
+    <svg id="the-map" viewBox="0 0 840 230" xmlns="http://www.w3.org/2000/svg"
+      style="width:100%;min-width:600px;display:block;">
+
+      <rect width="840" height="230" rx="6" fill="#141008"/>
+      <rect x="7" y="7" width="826" height="216" rx="4" fill="none" stroke="#2e2416" stroke-width="0.5"/>
+      <rect x="12" y="12" width="816" height="206" rx="3" fill="none" stroke="#2e2416" stroke-width="0.5" stroke-dasharray="5 4"/>
+
+      <text x="420" y="222" text-anchor="middle" fill="#1e1810"
+        font-family="Cinzel,serif" font-size="9" letter-spacing="10">ROSSIYSKAYA IMPERIYA</text>
+
+      <g transform="translate(808,28)">
+        <line x1="0" y1="-12" x2="0" y2="12" stroke="#3a2e1e" stroke-width="0.5"/>
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="#3a2e1e" stroke-width="0.5"/>
+        <polygon points="0,-12 -2,-6 2,-6" fill="#3a2e1e"/>
+        <text x="0" y="-14" text-anchor="middle" fill="#3a2e1e" font-size="7" font-family="Cinzel,serif">N</text>
+      </g>
+
+      <path d="M 92,178 Q 135,72 182,86 Q 226,100 274,152 Q 316,198 358,202 Q 402,205 444,132 Q 482,62 532,174 Q 572,228 622,106 Q 664,46 728,170"
+        fill="none" stroke="#352818" stroke-width="2.5" stroke-dasharray="6 5"/>
+
+      <path id="done-path" fill="none" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+      <g id="nodes"></g>
+      <g id="piece"></g>
+    </svg>
+  </div>
+</div>
+
+<div class="stages-list" id="stages-list"></div>
+
+<div class="notes-card">
+  <div class="notes-hdr">&#9998; Field Notes — Zapiski</div>
+  <textarea id="notes-ta" placeholder="Запишите открытия... Record discoveries, bugs solved, things to remember..."></textarea>
+</div>
+
+<div class="foot-row">
+  <footer>Progress saved in your browser &middot; Россия велика</footer>
+  <button class="reset-btn" onclick="resetAll()">Reset Progress</button>
+</div>
+
+</div>
 <script>
+const ROMAN = ['I','II','III','IV','V','VI','VII','VIII'];
+
 const curriculum = [
   {
-    title: "Stage 1 — Localization & Text",
+    title: "Localization & Text",
+    city: "Moskva Oblast",
+    color: "#c9a84c",
     tasks: [
-      "Rename an existing country",
-      "Rename a good or resource (e.g. rename Coal to something custom)",
-      "Rename a law or political system",
-      "Rename a technology"
+      "Rename Russia to 'Rossiya' and update all dynamic Russian names",
+      "Rename a Russian resource or good (e.g. Iron → Zheleze)",
+      "Transliterate Russian law names (e.g. Serfdom → Krepostnoe Pravo)",
+      "Rename key Russian cities and states on the map",
+      "Transliterate Russian government types (Empire → Imperiya, Republic → Respublika)"
     ]
   },
   {
-    title: "Stage 2 — Tweaking Numbers",
+    title: "Tweaking Numbers",
+    city: "Sankt-Peterburg",
+    color: "#7a9bcf",
     tasks: [
-      "Change a country's starting treasury",
+      "Change Russia's starting treasury",
       "Change a technology's research cost",
-      "Change a building's output",
-      "Change a law's effect"
+      "Change a building's output or efficiency",
+      "Modify Russia's starting literacy or bureaucracy values"
     ]
   },
   {
-    title: "Stage 3 — History Files",
+    title: "History Files",
+    city: "Velikiy Novgorod",
+    color: "#8fba7a",
     tasks: [
-      "Change a country's starting laws",
-      "Change a country's starting ruler name and stats",
-      "Give a country extra starting buildings",
-      "Change which country owns a province at game start"
+      "Change Russia's starting laws (e.g. abolish serfdom from day one)",
+      "Change the Tsar's starting name and stats",
+      "Give Russia extra starting buildings — factories and railways",
+      "Change which territories Russia controls at game start"
     ]
   },
   {
-    title: "Stage 4 — Events",
+    title: "Events",
+    city: "Kazan",
+    color: "#cf8f7a",
     tasks: [
-      "Create a simple event that fires at game start",
-      "Create an event with multiple choices",
-      "Create an event that fires based on a condition",
-      "Create a chain of connected events that tell a story"
+      "Create a simple event that fires at Russia's game start",
+      "Create a Decembrist Revolt event with multiple outcomes",
+      "Create an event that fires when Russia reaches a condition",
+      "Create a serf emancipation event chain"
     ]
   },
   {
-    title: "Stage 5 — Decisions",
+    title: "Decisions",
+    city: "Yekaterinburg",
+    color: "#a87acf",
     tasks: [
-      "Create a simple decision the player can manually trigger",
-      "Create a decision with requirements",
-      "Create a decision with meaningful effects"
+      "Create a simple manually triggered decision",
+      "Create a Pan-Slavism decision with requirements",
+      "Create a Trans-Siberian Railway construction decision with meaningful effects"
     ]
   },
   {
-    title: "Stage 6 — Modifying Existing Systems",
+    title: "Modifying Existing Systems",
+    city: "Omsk",
+    color: "#cf7aab",
     tasks: [
-      "Add a new production method to an existing building",
-      "Create a new ideology or political movement",
-      "Add a new goods/resource to the game",
-      "Modify how an existing technology works"
+      "Add a new production method to an existing Russian building",
+      "Create a new Russian nationalist political movement",
+      "Add a new goods or resource to the game",
+      "Modify how an existing Russian technology works"
     ]
   },
   {
-    title: "Stage 7 — Creating New Content",
+    title: "Creating New Content",
+    city: "Irkutsk",
+    color: "#7acfcf",
     tasks: [
-      "Create a brand new building from scratch",
-      "Create a brand new technology",
-      "Create a new law with custom effects",
-      "Create a new journal entry (mission/quest for the player)"
+      "Create a new Siberian fur trade building from scratch",
+      "Create a Trans-Siberian Railway technology",
+      "Create a new Russian law with custom political effects",
+      "Create a Siberian expansion journal entry with milestones"
     ]
   },
   {
-    title: "Stage 8 — Creating a New Country",
+    title: "The Siberian Republic",
+    city: "Vladivostok",
+    color: "#cfba7a",
     tasks: [
-      "Create a new tag and define the country's basic identity",
-      "Set up the country's starting history (territory, laws, ruler)",
-      "Add custom localization for country name and adjective",
-      "Add a custom flag",
-      "Write a custom starting event for your new country",
-      "Add a journal entry with goals for your new country"
+      "Create the Siberian Republic as a new country tag",
+      "Set up its starting history — territory, laws, and ruler",
+      "Add Russian localization for the new country",
+      "Design and add a custom flag for the Siberian Republic",
+      "Write a custom starting event for the Siberian Republic",
+      "Create a journal entry with goals for the Siberian Republic to achieve"
     ]
   }
 ];
 
-const stageColors = ['#c9a84c','#7a9bcf','#8fba7a','#cf8f7a','#a87acf','#cf7aab','#7acfcf','#cfba7a'];
+const nodes = [
+  { x: 92,  y: 178, l1: "Moskva",     l2: "Oblast" },
+  { x: 182, y: 86,  l1: "Sankt-",     l2: "Peterburg" },
+  { x: 274, y: 152, l1: "Velikiy",    l2: "Novgorod" },
+  { x: 358, y: 202, l1: "Kazan",      l2: "" },
+  { x: 444, y: 132, l1: "Yekate-",    l2: "rinburg" },
+  { x: 532, y: 174, l1: "Omsk",       l2: "" },
+  { x: 622, y: 106, l1: "Irkutsk",    l2: "" },
+  { x: 728, y: 170, l1: "Vladi-",     l2: "vostok" }
+];
 
-let state = JSON.parse(localStorage.getItem('vic3tracker') || '{}');
-let notes = localStorage.getItem('vic3notes') || '';
+let state = {};
+let notesVal = '';
+try { state = JSON.parse(localStorage.getItem('rossiya_v2') || '{}'); } catch(e){}
+notesVal = localStorage.getItem('rossiya_notes_v2') || '';
+
+const ns = 'http://www.w3.org/2000/svg';
+function svgEl(tag, attrs, text) {
+  const el = document.createElementNS(ns, tag);
+  if (attrs) Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v));
+  if (text !== undefined) el.textContent = text;
+  return el;
+}
+
+function stageProg(si) {
+  const total = curriculum[si].tasks.length;
+  const done  = curriculum[si].tasks.filter((_,ti) => state[si+'_'+ti]).length;
+  return { done, total, pct: total ? done/total : 0 };
+}
+
+function totalDone() { return Object.values(state).filter(Boolean).length; }
+function totalAll()  { return curriculum.reduce((a,s) => a + s.tasks.length, 0); }
+
+function currentStageIdx() {
+  for (let si = 0; si < curriculum.length; si++) {
+    const { done, total } = stageProg(si);
+    if (done < total) return si;
+  }
+  return curriculum.length - 1;
+}
 
 function save() {
-  localStorage.setItem('vic3tracker', JSON.stringify(state));
-  localStorage.setItem('vic3notes', document.getElementById('notes').value);
-}
-
-function totalTasks() {
-  return curriculum.reduce((a, s) => a + s.tasks.length, 0);
-}
-
-function doneTasks() {
-  return Object.values(state).filter(Boolean).length;
+  localStorage.setItem('rossiya_v2', JSON.stringify(state));
+  const ta = document.getElementById('notes-ta');
+  if (ta) localStorage.setItem('rossiya_notes_v2', ta.value);
 }
 
 function updateStats() {
-  const total = totalTasks();
-  const done = doneTasks();
-  const pct = Math.round((done / total) * 100);
-  document.getElementById('stat-done').textContent = done;
-  document.getElementById('stat-remain').textContent = total - done;
-  document.getElementById('stat-pct').textContent = pct + '%';
-  document.getElementById('prog-fill').style.width = pct + '%';
-  document.getElementById('prog-label').textContent = done + ' / ' + total + ' lessons';
+  const done  = totalDone();
+  const total = totalAll();
+  const pct   = Math.round(done / total * 100);
+  const cur   = currentStageIdx();
 
-  curriculum.forEach((stage, si) => {
-    const stageDone = stage.tasks.filter((_, ti) => state[si + '_' + ti]).length;
-    const el = document.getElementById('stage-prog-' + si);
-    if (el) el.textContent = stageDone + ' / ' + stage.tasks.length;
+  document.getElementById('sn-done').textContent  = done;
+  document.getElementById('sn-left').textContent  = total - done;
+  document.getElementById('sn-stage').textContent = ROMAN[cur];
+  document.getElementById('sn-pct').textContent   = pct + '%';
+
+  const n = nodes[cur];
+  document.getElementById('map-loc-label').textContent =
+    (n.l1 + n.l2).replace('-','') + ' — Stage ' + ROMAN[cur];
+
+  curriculum.forEach((_,si) => {
+    const { done: d, total: t } = stageProg(si);
+    const el = document.getElementById('sp-'+si);
+    if (el) el.textContent = d + ' / ' + t;
+    const card = document.getElementById('sc-'+si);
+    if (card) {
+      card.classList.remove('is-active','is-done');
+      if (d === t) card.classList.add('is-done');
+      else if (si === cur) card.classList.add('is-active');
+    }
   });
+
+  drawMap();
+}
+
+function drawMap() {
+  const nodesG = document.getElementById('nodes');
+  const pieceG = document.getElementById('piece');
+  if (!nodesG || !pieceG) return;
+  nodesG.innerHTML = '';
+  pieceG.innerHTML = '';
+
+  const cur = currentStageIdx();
+  const R = 20;
+  const circ = 2 * Math.PI * R;
+
+  nodes.forEach((pos, si) => {
+    const { done, total, pct } = stageProg(si);
+    const isComplete = done === total;
+    const isCurrent  = si === cur && !isComplete;
+    const isPast     = si < cur || isComplete;
+
+    const g = svgEl('g', { transform: `translate(${pos.x},${pos.y})`, style: 'cursor:pointer' });
+    g.onclick = () => scrollToStage(si);
+
+    if (isCurrent) {
+      const ripple = svgEl('circle', { r: '24', fill: 'none', stroke: '#8b1a1a', 'stroke-width': '1', opacity: '0' });
+      const anim = svgEl('animate', {
+        attributeName: 'r', from: '22', to: '38',
+        dur: '2s', repeatCount: 'indefinite'
+      });
+      const animOp = svgEl('animate', {
+        attributeName: 'opacity', from: '0.4', to: '0',
+        dur: '2s', repeatCount: 'indefinite'
+      });
+      ripple.appendChild(anim);
+      ripple.appendChild(animOp);
+      g.appendChild(ripple);
+    }
+
+    g.appendChild(svgEl('circle', {
+      r: R, fill: 'none',
+      stroke: isPast ? '#5a4020' : '#241c10',
+      'stroke-width': '2.5'
+    }));
+
+    if (pct > 0) {
+      g.appendChild(svgEl('circle', {
+        r: R, fill: 'none',
+        stroke: isComplete ? '#c9a84c' : '#8b1a1a',
+        'stroke-width': '2.5',
+        'stroke-dasharray': `${pct * circ} ${circ}`,
+        'stroke-dashoffset': circ * 0.25,
+        'stroke-linecap': 'round',
+        transform: 'rotate(-90)'
+      }));
+    }
+
+    g.appendChild(svgEl('circle', {
+      r: R - 5,
+      fill: isComplete ? '#231900' : isCurrent ? '#180808' : '#0c0a07',
+      stroke: isComplete ? '#c9a84c' : isCurrent ? '#8b1a1a' : '#2e2416',
+      'stroke-width': '1'
+    }));
+
+    const lbl = svgEl('text', {
+      'text-anchor': 'middle',
+      'dominant-baseline': 'central',
+      fill: isComplete ? '#c9a84c' : isCurrent ? '#c94040' : '#4a3822',
+      'font-family': 'Cinzel,serif',
+      'font-size': '10',
+      'font-weight': '600'
+    }, isComplete ? '✓' : ROMAN[si]);
+    g.appendChild(lbl);
+
+    const fillC = isComplete ? '#907030' : isCurrent ? '#7a4030' : '#322818';
+    const l1 = svgEl('text', {
+      'text-anchor': 'middle',
+      y: R + 13,
+      fill: fillC,
+      'font-family': 'Crimson Pro,serif',
+      'font-size': '8.5',
+      'font-style': 'italic'
+    }, pos.l1);
+    g.appendChild(l1);
+
+    if (pos.l2) {
+      const l2 = svgEl('text', {
+        'text-anchor': 'middle',
+        y: R + 22,
+        fill: fillC,
+        'font-family': 'Crimson Pro,serif',
+        'font-size': '8.5',
+        'font-style': 'italic'
+      }, pos.l2);
+      g.appendChild(l2);
+    }
+
+    nodesG.appendChild(g);
+  });
+
+  const cp = nodes[cur];
+  const pg = svgEl('g', { transform: `translate(${cp.x},${cp.y - 34})`, style: 'animation: bob 2.2s ease-in-out infinite' });
+
+  pg.appendChild(svgEl('circle', {
+    r: '12', fill: '#6e1010',
+    stroke: '#c9a84c', 'stroke-width': '1.5'
+  }));
+
+  pg.appendChild(svgEl('text', {
+    'text-anchor': 'middle',
+    'dominant-baseline': 'central',
+    fill: '#e8c96a',
+    'font-size': '13'
+  }, '♛'));
+
+  pg.appendChild(svgEl('line', {
+    x1: '0', y1: '12', x2: '0', y2: '23',
+    stroke: '#8b1a1a', 'stroke-width': '1',
+    'stroke-dasharray': '2 2'
+  }));
+
+  pieceG.appendChild(pg);
+}
+
+function scrollToStage(si) {
+  const el = document.getElementById('sc-'+si);
+  if (!el) return;
+  el.classList.remove('collapsed');
+  setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
 }
 
 function toggleTask(si, ti) {
-  const key = si + '_' + ti;
-  if (state[key]) {
-    delete state[key];
-  } else {
-    state[key] = new Date().toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-  }
-  const taskEl = document.getElementById('task-' + si + '_' + ti);
-  if (taskEl) {
-    taskEl.classList.toggle('done', !!state[key]);
-    const dateEl = taskEl.querySelector('.task-date');
-    if (dateEl) dateEl.textContent = state[key] || '';
+  const key = si+'_'+ti;
+  if (state[key]) { delete state[key]; }
+  else { state[key] = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
+  const row = document.getElementById('tr-'+key);
+  if (row) {
+    row.classList.toggle('done', !!state[key]);
+    row.querySelector('.t-box').textContent = state[key] ? '✓' : '';
+    const dt = row.querySelector('.t-date');
+    if (dt) dt.textContent = state[key] ? 'Completed ' + state[key] : '';
   }
   save();
   updateStats();
 }
 
 function toggleStage(si) {
-  const el = document.getElementById('stage-' + si);
-  el.classList.toggle('collapsed');
+  document.getElementById('sc-'+si).classList.toggle('collapsed');
 }
 
 function resetAll() {
   if (!confirm('Reset all progress? This cannot be undone.')) return;
   state = {};
-  localStorage.removeItem('vic3tracker');
-  document.querySelectorAll('.task').forEach(t => t.classList.remove('done'));
-  document.querySelectorAll('.task-date').forEach(t => t.textContent = '');
+  localStorage.removeItem('rossiya_v2');
+  document.querySelectorAll('.task-row').forEach(r => r.classList.remove('done'));
+  document.querySelectorAll('.t-box').forEach(b => b.textContent = '');
+  document.querySelectorAll('.t-date').forEach(d => d.textContent = '');
   updateStats();
 }
 
-function render() {
-  const container = document.getElementById('stages');
-  let taskNum = 0;
+function buildUI() {
+  const list = document.getElementById('stages-list');
+  let absN = 0;
 
   curriculum.forEach((stage, si) => {
-    taskNum++;
-    const stageEl = document.createElement('div');
-    stageEl.className = 'stage';
-    stageEl.id = 'stage-' + si;
+    const { done, total } = stageProg(si);
+    const card = document.createElement('div');
+    card.className = 'stage-card' + (si > 0 ? ' collapsed' : '');
+    card.id = 'sc-'+si;
 
-    const color = stageColors[si % stageColors.length];
-    const stageDone = stage.tasks.filter((_, ti) => state[si + '_' + ti]).length;
-
-    stageEl.innerHTML = `
-      <div class="stage-header" onclick="toggleStage(${si})">
-        <div class="stage-dot" style="background:${color}"></div>
-        <span class="stage-title">${stage.title}</span>
-        <span class="stage-progress" id="stage-prog-${si}">${stageDone} / ${stage.tasks.length}</span>
-        <span class="stage-chevron">&#9660;</span>
+    card.innerHTML = `
+      <div class="stage-hdr" onclick="toggleStage(${si})">
+        <span class="s-num">${ROMAN[si]}.</span>
+        <div class="s-dot" style="background:${stage.color}"></div>
+        <div class="s-info">
+          <span class="s-title">${stage.title}</span>
+          <span class="s-city">${stage.city}</span>
+        </div>
+        <span class="s-prog" id="sp-${si}">${done} / ${total}</span>
+        <span class="s-chev">&#9660;</span>
       </div>
-      <div class="stage-body" id="stage-body-${si}"></div>
+      <div class="stage-body" id="sb-${si}"></div>
     `;
+    list.appendChild(card);
 
-    container.appendChild(stageEl);
-
-    const body = document.getElementById('stage-body-' + si);
+    const body = document.getElementById('sb-'+si);
     stage.tasks.forEach((task, ti) => {
-      const key = si + '_' + ti;
-      const done = !!state[key];
-      const date = state[key] || '';
-      const absNum = curriculum.slice(0, si).reduce((a, s) => a + s.tasks.length, 0) + ti + 1;
+      const key = si+'_'+ti;
+      const isDone = !!state[key];
+      const dt = state[key] || '';
+      absN++;
 
-      const taskEl = document.createElement('div');
-      taskEl.className = 'task' + (done ? ' done' : '');
-      taskEl.id = 'task-' + key;
-      taskEl.onclick = () => toggleTask(si, ti);
-      taskEl.innerHTML = `
-        <div class="task-check"></div>
-        <span class="task-num">${absNum}.</span>
-        <span class="task-text">${task}</span>
-        <span class="task-date">${date}</span>
+      const row = document.createElement('div');
+      row.className = 'task-row' + (isDone ? ' done' : '');
+      row.id = 'tr-'+key;
+      row.onclick = () => toggleTask(si, ti);
+      row.innerHTML = `
+        <div class="t-box">${isDone ? '✓' : ''}</div>
+        <span class="t-num">${absN}.</span>
+        <div class="t-inner">
+          <div class="t-text">${task}</div>
+          <div class="t-date">${dt ? 'Completed ' + dt : ''}</div>
+        </div>
       `;
-      body.appendChild(taskEl);
+      body.appendChild(row);
     });
   });
 
-  document.getElementById('notes').value = notes;
-  document.getElementById('notes').addEventListener('input', save);
+  const ta = document.getElementById('notes-ta');
+  ta.value = notesVal;
+  ta.addEventListener('input', save);
+
   updateStats();
 }
 
-render();
-
-const first = document.getElementById('stage-0');
-if (first) first.classList.add('');
-for (let i = 1; i < curriculum.length; i++) {
-  const el = document.getElementById('stage-' + i);
-  if (el) el.classList.add('collapsed');
-}
+buildUI();
 </script>
 </body>
 </html>
