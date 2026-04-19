@@ -1,3 +1,3 @@
-name="My First Mod"
-path="mod/my_first_mod"
+name="Russia Overhaul"
+path="mod/russia_overhaul"
 supported_version="1.*.*"

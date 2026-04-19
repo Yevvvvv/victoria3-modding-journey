@@ -104,3 +104,644 @@
 
  prestige_good_smirnoff_vodka:0 "Vodka Smirnova"
  prestige_good_russia_iron:0 "Rossiyskoe Zhelezo"
+
+# --- 1.3 Law & Ideology Names ---
+
+ # Note: _desc entries intentionally skipped to preserve game formatting codes
+ # Note: country-specific ideologies (Carlist, Bonapartist etc.) left in original language
+ # Source: laws_l_english.yml
+
+ ########################################
+ # GOVERNANCE PRINCIPLES
+ ########################################
+ lawgroup_governance_principles:0 "Printsipy Upravleniya"
+ law_chiefdom:0 "Knyazhestvo"
+ law_monarchy:0 "Monarkhiya"
+ law_presidential_republic:0 "Prezidentskaya Respublika"
+ law_parliamentary_republic:0 "Parlamentskaya Respublika"
+ law_theocracy:0 "Teokratiya"
+ law_council_republic:0 "Sovetskaya Respublika"
+ law_corporate_state:0 "Korporativnoye Gosudarstvo"
+ law_colonial_administration:0 "Kolonialnaya Administratsiya"
+ law_organic_regulation:0 "Organicheskiy Reglament"
+ law_neo_absolutism:0 "Neo-Absolyutizm"
+
+ ########################################
+ # FREE SPEECH
+ ########################################
+ lawgroup_free_speech:0 "Svoboda Slova"
+ law_outlawed_dissent:0 "Zapret Inakomysliya"
+ law_censorship:0 "Tsenzura"
+ law_right_of_assembly:0 "Pravo Sobraniy"
+ law_protected_speech:0 "Zashchita Slova"
+
+ ########################################
+ # ARMY MODEL
+ ########################################
+ lawgroup_army_model:0 "Model Armii"
+ law_peasant_levies:0 "Krestyanskoe Opolchenie"
+ law_national_militia:0 "Narodnoe Opolchenie"
+ law_mass_conscription:0 "Massovyy Prizyv"
+ law_professional_army:0 "Professionalnaya Armiya"
+
+ ########################################
+ # DISTRIBUTION OF POWER
+ ########################################
+ lawgroup_distribution_of_power:0 "Raspredelenie Vlasti"
+ law_autocracy:0 "Samoderzhavie"
+ law_oligarchy:0 "Oligarkhiya"
+ law_landed_voting:0 "Zemlevladelcheskoe Golosovanie"
+ law_wealth_voting:0 "Imushchestvennyy Tsenz"
+ law_census_voting:0 "Tsenzovoe Golosovanie"
+ law_universal_suffrage:0 "Vseobshchee Izbiratelnoe Pravo"
+ law_elder_council:0 "Sovet Stareyshikh"
+ law_anarchy:0 "Anarkhiya"
+ law_single_party_state:0 "Odnopartiynoye Gosudarstvo"
+
+ ########################################
+ # LABOR RIGHTS
+ ########################################
+ lawgroup_labor_rights:0 "Prava Rabochikh"
+ law_serfdom:0 "Krepostnoe Pravo"
+ law_no_workers_rights:0 "Otsutstvie Prav Rabochikh"
+ law_regulatory_bodies:0 "Reguliruyushchie Organy"
+ law_worker_protections:0 "Zashchita Rabochikh"
+
+ ########################################
+ # CHILDREN'S RIGHTS
+ ########################################
+ lawgroup_childrens_rights:0 "Prava Detey"
+ law_child_labor_allowed:0 "Detskiy Trud Razreshen"
+ law_restricted_child_labor:0 "Ogranichennyy Detskiy Trud"
+ law_compulsory_primary_school:0 "Obyazatelnaya Nachalnaya Shkola"
+
+ ########################################
+ # SLAVERY
+ ########################################
+ lawgroup_slavery:0 "Rabstvo"
+ law_slavery_banned:0 "Rabstvo Zapreshcheno"
+ law_debt_slavery:0 "Dolgovoe Rabstvo"
+ law_slave_trade:0 "Torgovlya Rabami"
+ law_legacy_slavery:0 "Nasledstvennoe Rabstvo"
+ law_colonial_slavery:0 "Kolonialnoe Rabstvo"
+
+ ########################################
+ # CHURCH AND STATE
+ ########################################
+ lawgroup_church_and_state:0 "Tserkov i Gosudarstvo"
+ law_state_religion:0 "Gosudarstvennaya Religiya"
+ law_freedom_of_conscience:0 "Svoboda Sovesti"
+ law_total_separation:0 "Polnoe Razdelenie"
+ law_atheist_state:0 "Ateisticheskoe Gosudarstvo"
+
+ ########################################
+ # CITIZENSHIP
+ ########################################
+ lawgroup_citizenship:0 "Grazhdanstvo"
+ law_ethnostate:0 "Etnicheskoe Gosudarstvo"
+ law_national_supremacy:0 "Natsionalnoe Prevoskhodstvo"
+ law_racial_segregation:0 "Rasovaya Segregatsiya"
+ law_cultural_exclusion:0 "Kulturnoe Isklyuchenie"
+ law_multicultural:0 "Multikulturalizm"
+ law_subjecthood:0 "Poddanstvo"
+
+ ########################################
+ # ECONOMIC SYSTEM
+ ########################################
+ lawgroup_economic_system:0 "Ekonomicheskaya Sistema"
+ law_traditionalism:0 "Traditsionalizm"
+ law_agrarianism:0 "Agrarianizm"
+ law_cooperative_ownership:0 "Kooperativnaya Sobstvennost"
+ law_command_economy:0 "Komandnaya Ekonomika"
+ law_interventionism:0 "Interventsionizm"
+
+ ########################################
+ # TRADE POLICY
+ ########################################
+ lawgroup_trade_policy:0 "Torgovaya Politika"
+ law_free_trade:0 "Svobodnaya Torgovlya"
+ law_protectionism:0 "Protektsionizm"
+ law_isolationism:0 "Izolyatsionizm"
+ law_mercantilism:0 "Merkantilizm"
+
+ ########################################
+ # TAXATION
+ ########################################
+ lawgroup_taxation:0 "Nalogooblozhenie"
+ law_consumption_based_taxation:0 "Potrebitelskoe Nalogooblozhenie"
+ law_land_based_taxation:0 "Zemelnoe Nalogooblozhenie"
+ law_per_capita_based_taxation:0 "Podushnaya Podat"
+ law_proportional_taxation:0 "Proportsionalnoe Nalogooblozhenie"
+ law_graduated_taxation:0 "Progressivnoe Nalogooblozhenie"
+
+ ########################################
+ # EDUCATION
+ ########################################
+ lawgroup_education_system:0 "Sistema Obrazovaniya"
+ law_no_schools:0 "Otsutstvie Shkol"
+ law_religious_schools:0 "Tserkovnye Shkoly"
+ law_private_schools:0 "Chastnye Shkoly"
+ law_public_schools:0 "Gosudarstvennye Shkoly"
+
+ ########################################
+ # HEALTH SYSTEM
+ ########################################
+ lawgroup_health_system:0 "Sistema Zdravookhraneniya"
+ law_no_health_system:0 "Otsutstvie Zdravookhraneniya"
+ law_charitable_health_system:0 "Blagotvoritelnye Bolnitsy"
+ law_private_health_insurance:0 "Chastnoe Meditsinskoe Strakhovanie"
+ law_public_health_insurance:0 "Gosudarstvennoe Meditsinskoe Strakhovanie"
+
+ ########################################
+ # WELFARE
+ ########################################
+ lawgroup_welfare:0 "Sotsialnoe Obespechenie"
+ law_no_social_security:0 "Otsutstvie Sotsialnoy Zashchity"
+ law_poor_laws:0 "Zakony o Bednyakakh"
+ law_wage_subsidies:1 "Subsidii k Zarplate"
+ law_old_age_pension:0 "Pensiya po Starosti"
+ law_disability_insurance:0 "Strakhovanie po Invalidnosti"
+
+ ########################################
+ # RIGHTS OF WOMEN
+ ########################################
+ lawgroup_rights_of_women:0 "Prava Zhenshchin"
+ law_no_womens_rights:0 "Muzhskaya Opeka"
+ law_women_own_property:0 "Pravo Sobstvennosti Zhenshchin"
+ law_women_in_the_workplace:0 "Zhenshchiny na Rabote"
+ law_womens_suffrage:0 "Izbiratelnoe Pravo Zhenshchin"
+
+ ########################################
+ # POLICING
+ ########################################
+ lawgroup_policing:0 "Politseiskaya Sluzhba"
+ law_no_police:0 "Otsutstvie Politsii"
+ law_local_police:0 "Mestnaya Politsiya"
+ law_dedicated_police:0 "Spetsialnaya Politsiya"
+ law_militarized_police:0 "Militarizovannaya Politsiya"
+
+ ########################################
+ # BUREAUCRACY
+ ########################################
+ lawgroup_bureaucracy:0 "Byurokratiya"
+ law_hereditary_bureaucrats:0 "Nasledstvennye Chinovniki"
+ law_appointed_bureaucrats:0 "Naznachennye Chinovniki"
+ law_meritocratic_bureaucracy:0 "Meritoкraticheskaya Byurokratiya"
+ law_elected_bureaucrats:0 "Vybornye Chinovniki"
+ law_crownland_diets:0 "Zemskie Sobory"
+
+ ########################################
+ # COLONIZATION
+ ########################################
+ lawgroup_colonization:0 "Kolonizatsiya"
+ law_no_colonial_affairs:0 "Otsutstvie Kolonialnykh Del"
+ law_colonial_resettlement:0 "Kolonialnoye Pereselenie"
+ law_colonial_exploitation:0 "Kolonialnaya Ekspluatatsiya"
+ law_frontier_colonization:0 "Frontirnoye Osvoenie"
+
+ ########################################
+ # INTERNAL SECURITY
+ ########################################
+ lawgroup_internal_security:0 "Vnutrennyaya Bezopasnost"
+ law_no_home_affairs:0 "Otsutstvie Vnutrennikh Del"
+ law_national_guard:0 "Natsionalnaya Gvardiya"
+ law_secret_police:0 "Okhranka"
+ law_guaranteed_liberties:0 "Garantirovannye Svobody"
+
+ ########################################
+ # MIGRATION
+ ########################################
+ lawgroup_migration:0 "Migratsiya"
+ law_no_migration_controls:0 "Otsutstvie Kontrolya Migratsii"
+ law_migration_controls:0 "Kontrol Migratsii"
+ law_closed_borders:0 "Zakrytye Granitsy"
+
+ ########################################
+ # LABOR ASSOCIATIONS
+ ########################################
+ lawgroup_labour_associations:0 "Trudovye Obyedineniya"
+ law_guild_system:0 "Sistema Tsekhovykh Organizatsiy"
+ law_combination_acts:0 "Zakony o Zaprete Soyuzov"
+ law_anti_strike_laws:0 "Zapret Zabastovok"
+ law_right_to_associate:0 "Pravo na Obyedinenie"
+ law_corporatized_unions:0 "Gosudarstvennye Profsoyuzy"
+ law_factory_councils:0 "Fabrichnyye Sovety"
+ law_industry_banned:0 "Zapret Industrii"
+
+ ########################################
+ # LAND REFORM
+ ########################################
+ lawgroup_land_reform:0 "Zemelnaya Reforma"
+ law_tenant_farmers:0 "Arendatory"
+ law_homesteading:0 "Zemleustroistvo"
+ law_commercialized_agriculture:0 "Kommercheskoe Zemledelie"
+ law_collectivized_agriculture:0 "Kollektivizatsiya"
+ law_latifundias:0 "Latifundii"
+ law_expanded_latifundias:0 "Rasshirennye Latifundii"
+ law_manorialism:0 "Pomeshchiche Khozyaystvo"
+ law_extraction_economy:0 "Ekstraktivnaya Ekonomika"
+
+ ########################################
+ # LEADER IDEOLOGIES
+ ########################################
+ ideology_moderate:0 "Umerennyy"
+ ideology_traditionalist:0 "Traditsionalist"
+ ideology_republican_leader:0 "Respublikanets"
+ ideology_radical:0 "Radikal"
+ ideology_abolitionist:0 "Abolitsionist"
+ ideology_slaver:0 "Rabovladelets"
+ ideology_feminist:0 "Feminist"
+ ideology_reformer:0 "Reformator"
+ ideology_pacifist:0 "Patsifist"
+ ideology_jingoist_leader:0 "Shovist"
+ ideology_royalist:0 "Royalist"
+ ideology_social_democrat:0 "Sotsial-Demokrat"
+ ideology_communist:0 "Kommunist"
+ ideology_vanguardist:0 "Avangardist"
+ ideology_fascist:0 "Fashist"
+ ideology_anarchist:0 "Anarkhist"
+ ideology_ethno_nationalist:0 "Etnonatsionalist"
+ ideology_theocrat:0 "Teokrat"
+ ideology_market_liberal:0 "Liberalnyy Rynochnik"
+ ideology_liberal_leader:1 "Liberal"
+ ideology_nihilist:0 "Nigilist"
+ ideology_despotic_utopian:0 "Despoticheskiy Utopist"
+ ideology_authoritarian:0 "Avtoritarnyy"
+ ideology_humanitarian:0 "Gumanist"
+ ideology_protectionist:0 "Protektsionist"
+ ideology_humanitarian_royalist:0 "Prosveshchennyy Royalist"
+ ideology_land_reformer:0 "Zemelnыy Reformator"
+ ideology_sovereignist_leader:0 "Suverenist"
+ ideology_utopian:0 "Utopist"
+ ideology_utilitarian_leader:1 "Utilitarist"
+ ideology_jacksonian_democrat:0 "Dzheksonist"
+ ideology_luddite:0 "Luddit"
+
+ ########################################
+ # INTEREST GROUP IDEOLOGIES
+ ########################################
+ ideology_constitutionalist:0 "Konstitutsionalist"
+ ideology_socialist:0 "Sotsialist"
+ ideology_paternalistic:0 "Paternalisticheskiy"
+ ideology_patriarchal:0 "Patriarkhalnyy"
+ ideology_republican:0 "Respublikanets"
+ ideology_populist:0 "Populist"
+ ideology_hierarchic:0 "Ierarkhicheskiy"
+ ideology_oligarchic:0 "Oligarkhicheskiy"
+ ideology_individualist:0 "Individualist"
+ ideology_pious:0 "Blagochestivyy"
+ ideology_particularist:0 "Partikulyarist"
+ ideology_isolationist:0 "Izolyatsionist"
+ ideology_moralist:0 "Moralist"
+ ideology_jingoist:0 "Shovist"
+ ideology_loyalist:0 "Loyalist"
+ ideology_meritocratic:0 "Meritoкrat"
+ ideology_patriotic:0 "Patriot"
+ ideology_military_absolutist:0 "Voennyy Absolyutist"
+ ideology_liberal:0 "Liberal"
+ ideology_anti_clerical:0 "Antiklerikalnyy"
+ ideology_proletarian:0 "Proletariy"
+ ideology_egalitarian:0 "Egalitarist"
+ ideology_anti_slavery:0 "Abolitsionist"
+ ideology_pro_slavery:0 "Rabovladelets"
+ ideology_reactionary:0 "Reaktsioner"
+ ideology_plutocratic:0 "Plutokrat"
+ ideology_agrarian:0 "Agrariy"
+ ideology_corporatist:0 "Korporativist"
+ ideology_laissez_faire:0 "Libre-Ekonomist"
+ ideology_russian_patriarch:0 "Russkaya Pravoslavnaya Patriarkhiya"
+ ideology_orthodox_patriarch:0 "Pravoslavnaya Patriarkhiya"
+ ideology_technocratic:0 "Tekhnokrat"
+ ideology_colonialist:0 "Kolonialist"
+ ideology_sovereignist:0 "Suverenist"
+ ideology_malthusian:0 "Maltuzianets"
+
+ ########################################
+ # MOVEMENT IDEOLOGIES
+ ########################################
+ ideology_absolutist_movement:0 "Absolyutist"
+ ideology_royalist_movement:0 "Royalist"
+ ideology_proletarian_movement:0 "Proletariy"
+ ideology_socialist_movement:0 "Sotsialist"
+ ideology_communist_movement:0 "Kommunist"
+ ideology_anarchist_movement:0 "Anarkhist"
+ ideology_vanguardist_movement:0 "Avangardist"
+ ideology_fascist_movement:0 "Fashist"
+ ideology_liberal_movement:0 "Liberal"
+ ideology_liberal_republican_movement:0 "Respublikanets"
+ ideology_radical_movement:0 "Radikal"
+ ideology_nihilist_movement:0 "Nigilist"
+ ideology_land_reformer_movement:0 "Zemelnыy Reformator"
+ ideology_feminist_movement:0 "Feminist"
+ ideology_reactionary_movement:0 "Reaktsioner"
+ ideology_traditionalist_movement:0 "Traditsionalist"
+ ideology_ethno_nationalist_movement:0 "Etnonatsionalist"
+ ideology_national_liberal_movement:0 "Natsional-Liberal"
+ ideology_corporatist_movement:0 "Korporativist"
+ ideology_utilitarian_movement:0 "Utilitarist"
+
+ ########################################
+ # ENACTMENT PHASES
+ ########################################
+ enactment_phase_0_tec: "Formulirovka"
+ enactment_phase_1_tec: "Rassmotrenie"
+ enactment_phase_2_tec: "Vvedenie"
+ enactment_phase_0_autocracy: "Predstavlenie"
+ enactment_phase_1_autocracy: "Obsuzdenie"
+ enactment_phase_2_autocracy: "Prinyatie"
+ enactment_phase_0_mon: "Predstavlenie"
+ enactment_phase_1_mon: "Rassmotrenie"
+ enactment_phase_2_mon: "Soglasovanie"
+ enactment_phase_0_generic: "Razrabotka"
+ enactment_phase_1_generic: "Popravki"
+ enactment_phase_2_generic: "Golosovanie"
+
+# --- 1.4 Technology Names ---
+ 
+ # Note: _desc entries skipped to preserve game formatting codes
+ # Note: commented-out entries in base game skipped
+ # Source: inventions_l_english.yml
+
+ ########################################
+ # MILITARY TECHNOLOGIES
+ ########################################
+ admiralty:0 "Admiraltestvo"
+ army_reserves:0 "Voyennye Rezervy"
+ battlefleet_tactics:0 "Taktika Boyevogo Flota"
+ battleship_tech:0 "Linkor"
+ bolt_action_rifles:0 "Zatvornoye Ruzhe"
+ breech_loading_artillery:0 "Kazennozaryadnaya Artilleriya"
+ chemical_warfare:0 "Khimicheskaya Voyna"
+ concrete_fortifications:0 "Betonnyye Ukrepleniya"
+ carrier_tech:0 "Avianosets"
+ defense_in_depth:0 "Glubokaya Oborona"
+ destroyer:0 "Esminets"
+ dreadnought_tech:0 "Dreadnout"
+ dynamite:0 "Dinamit"
+ field_works:0 "Polevye Ukrepleniya"
+ flamethrowers:0 "Ognemety"
+ fulminates:0 "Fulminaty"
+ general_staff:0 "Generalnyy Shtab"
+ gunpowder:0 "Porokh"
+ gunsmithing:0 "Oruzheynoe Delo"
+ gymnastics:0 "Gimnastika"
+ gyroscopes:0 "Giroskopy"
+ handcranked_machine_gun:0 "Ruchnoy Pulemyot"
+ ironclad_tech:0 "Bronenosets"
+ jeune_ecole:0 "Molodaya Shkola"
+ landing_craft:0 "Desantnye Suda"
+ logistics:0 "Logistika"
+ military:0 "Armiya"
+ military_aviation:0 "Voyennaya Aviatsiya"
+ military_drill:0 "Voyennye Ucheniya"
+ military_statistics:0 "Voyennaya Statistika"
+ mobile_armor:0 "Podvizhnaya Bronya"
+ monitor_tech:0 "Monitor"
+ multilateral_alliances:1 "Mnogoсtoronnie Soyuzy"
+ napoleonic_warfare:0 "Napoleonovskaya Voyna"
+ naval_theory:0 "Morskaya Doktrina"
+ nco_training:0 "Podgotovka Serzhantskoego Sostava"
+ nitroglycerin:0 "Nitroglitserin"
+ percussion_cap:0 "Kapsulnyy Zamok"
+ percussion_caps:0 "Kapsuli"
+ pre_modern_warfare:0 "Dosovremennoye Voyennoe Delo"
+ repeaters:0 "Magazinnoe Ruzhe"
+ rifling:0 "Narezka Stvola"
+ screw_frigate:0 "Vintovoy Fregat"
+ sea_lane_strategies:0 "Strategiya Morskikh Putey"
+ self_propelled_torpedoes:0 "Samokhodnyye Torpedy"
+ shell_gun:0 "Bombovaya Pushka"
+ standing_army:0 "Postoyannnaya Armiya"
+ stormtroopers:0 "Shturmoviki"
+ submarine:0 "Podvodnaya Lodka"
+ trench_works:0 "Okopnyye Raboty"
+ wargaming:0 "Voyennye Igry"
+ war_propaganda:0 "Voyennaya Propaganda"
+ mandatory_service:0 "Vseobshchaya Voinskaya Obyazannost"
+ line_infantry:0 "Lineynaya Pekhota"
+ enlistment_offices:0 "Voenkomat"
+
+ ########################################
+ # INDUSTRIAL TECHNOLOGIES
+ ########################################
+ arc_welding:0 "Dugovaya Svarka"
+ art_silk:0 "Iskusstvennyy Shelk"
+ artificial_fertilisers:0 "Iskusstvennyye Udobreniya"
+ assembly_line:0 "Sborochnyy Konveyer"
+ atmospheric_engine:0 "Atmosfernyy Dvigatel"
+ automatic_bottle_blowers:0 "Avtomaticheskiye Stakloduvalki"
+ bessemer_process:0 "Protsess Bessemera"
+ bessemer_steel:0 "Bessemerovskaya Stal"
+ blast_furnaces:0 "Domennye Pechi"
+ canals:0 "Kanaly"
+ catalytic_contact_process:0 "Kataliticheskiy Kontaktnyy Protsess"
+ chemical_bleaching:0 "Khimicheskoe Otbelivanie"
+ chemical_isolation:0 "Khimicheskaya Izolyatsiya"
+ chemical_synthesis:0 "Khimicheskiy Sintez"
+ combustion_engine:0 "Dvigatel Vnutrennego Sgoraniya"
+ compression_ignition:0 "Kompressionnoe Zazhiganie"
+ concrete_dockyards:0 "Betonnyye Doki"
+ conveyors:0 "Konveyery"
+ cotton_gin:0 "Khlopkoochistitelnyy Stanok"
+ crucible_steel:0 "Tigelnyy Metall"
+ crystal_glass:0 "Khrustal"
+ distillation:0 "Distillyatsiya"
+ drydocks:0 "Sukhie Doki"
+ electric_arc_process:0 "Elektrodugovoy Protsess"
+ electric_railway:0 "Elektricheskaya Zheleznaya Doroga"
+ electric_telegraph:0 "Elektricheskiy Telegraf"
+ electrical_capacitors:0 "Elektricheskiye Kondensatory"
+ electrical_generation:0 "Elektrogeneratsiya"
+ elevator:0 "Lift"
+ fractional_distillation:0 "Fraktsionnaya Distillyatsiya"
+ gantry_cranes:0 "Portalnye Krany"
+ hydraulic_cranes:0 "Gidravlicheskiye Krany"
+ hydraulic_power:0 "Gidravlicheskaya Moshchnost"
+ lathe:0 "Tokarnyy Stanok"
+ lathes:0 "Tokarnyye Stanki"
+ manufacturies:0 "Manufaktury"
+ mechanical_tools:0 "Mekhanicheskiye Instrumenty"
+ mechanized_farming:0 "Mekhanizirovannoye Zemledelie"
+ mechanized_workshops:0 "Mekhanizirovannyye Masterskie"
+ nitrogen_fixation:0 "Fiksatsiya Azota"
+ oil_turbine:0 "Neftyanaya Turbina"
+ open_hearth_furnace:0 "Martenovskaya Pech"
+ open_hearth_process:0 "Martenovskiy Protsess"
+ paddle_steamer:0 "Parokhodstvo"
+ plastics:0 "Plastmassy"
+ pneumatic_tools:0 "Pnevmaticheskiye Instrumenty"
+ portland_cement:0 "Portlandskiy Tsement"
+ potash:0 "Kaliy"
+ power_looms:0 "Mekhanicheskiye Tkackie Stanki"
+ production:0 "Proizvodstvo"
+ prospecting:0 "Razvedka Mestorozhdeniy"
+ puddling_furnaces:0 "Pudlingovye Pechi"
+ pumpjacks:0 "Neftedobyvayushchiy Nasos"
+ railways:0 "Zheleznye Dorogi"
+ reinforced_concrete:0 "Zhelezobeton"
+ rotary_valve_engine:0 "Rotatsionnyy Parovoy Dvigatel"
+ rubber_mastication:0 "Obrabotka Kauchuka"
+ rubber_recycling:0 "Pererabotka Kauchuka"
+ rubberised_fabrics:0 "Rezinovye Tkani"
+ sericulture:0 "Shelkovodstvo"
+ shaft_mining:0 "Shakhtnaya Dobycha"
+ shift_work:0 "Smennyy Grafik"
+ slag_fertilisers:0 "Shlakovye Udobreniya"
+ steam_donkey:0 "Parovaya Lebedka"
+ steam_turbine:0 "Parovaya Turbina"
+ steel_frame_buildings:0 "Stalnye Karkasnyye Zdaniya"
+ steel_railway_cars:0 "Stalnye Vagony"
+ steelworking:0 "Stalelivatelnoye Delo"
+ streamliners:0 "Ekspressnyye Poyezda"
+ synthetic_dye:0 "Sinteticheskiy Krasitel"
+ system_gin:0 "Sistemnyy Khlopkoochistitel"
+ telegraph:0 "Telegraf"
+ telephone:0 "Telefon"
+ telephones:0 "Telefony"
+ threshing_machine:0 "Molotilnaya Mashina"
+ vulcanization:0 "Vulkanizatsiya"
+ watertube_boiler:0 "Vodotrubnnyy Kotel"
+ wood_pulp_papermaking:0 "Tsellyulozno-Bumazhnaya Promyshlennost"
+ paved_roads:0 "Moshchenye Dorogi"
+ pumpjacks:0 pumpjacks:0 "Neftyanoy Nasos"
+
+ ########################################
+ # AGRICULTURAL TECHNOLOGIES
+ ########pound#####################
+ baking_parter:0 "Pekarskiy Poroshok"
+ condensed_milk:0 "Sgushchennoe Moloko"
+ dough_rollers:0 "Testo-Raskatchiki"
+ enclosure:0 "Ogorazhivanie"
+ flash_freezing:0 "Bystroye Zamorazhivanie"
+ food_sterilisation:0 "Sterilizatsiya Produktov"
+ four_field_crop_rotation:0 "Chetyrekhpolnyy Sevooborot"
+ fruit_jars:0 "Fruktovye Konservy"
+ improved_fertilizer:0 "Uluchshennye Udobreniya"
+ intensive_agriculture:0 "Intensivnoye Zemledelie"
+ canneries:0 "Konservnyye Zavody"
+ canning_jars:0 "Konservnyye Banki"
+ canning_machines:0 "Konservnyye Mashiny"
+ tin_cans:0 "Zhestyanye Banki"
+ vacuum_canning:0 "Vakuumnoye Konservirovanie"
+
+ ########################################
+ # MEDICAL TECHNOLOGIES
+ ########################################
+ anaesthetics:0 "Anesteziya"
+ antibiotics:0 "Antibiotiki"
+ antiseptics:0 "Antiseptiki"
+ germ_theory:0 "Teoriya Mikrobov"
+ hypodermic_syringes:0 "Gipodermicheskiye Shpritsy"
+ malaria_prevention:0 "Profilaktika Malyarii"
+ medical_degrees:0 "Meditsinskie Stepeni"
+ modern_nursing:0 "Sovremennyy Ukhod za Bolnymi"
+ pasteurization:0 "Pasterizatsiya"
+ pharmaceuticals:0 "Farmatsevtika"
+ psychiatry:0 "Psikhiatriya"
+ psychoanalysis:0 "Psikhoanaliz"
+ quinine:0 "Khinin"
+ triage:0 "Triazh"
+ vaccination:0 "Vaktsinatsiya"
+ water_treatment:0 "Ochistka Vody"
+
+ ########################################
+ # POLITICAL & SOCIAL TECHNOLOGIES
+ ########################################
+ anarchism:0 "Anarkhizm"
+ anti_clericalism:0 "Antiklerikalizam"
+ behaviorism:0 "Bikheviorism"
+ biological_determinism:0 "Biologicheskiy Determinizm"
+ central_planning:0 "Tsentralnoye Planirovaniye"
+ civilizing_mission:0 "Tsivilizatorskaya Missiya"
+ colonization:0 "Kolonizatsiya"
+ combination_acts:0 "Zakony o Zaprete Soyuzov"
+ conspicuous_consumption:0 "Pokaznoye Potrebleniye"
+ corporatism:0 "Korporativizm"
+ democracy:0 "Demokratiya"
+ dialectics:0 "Dialektika"
+ divine_revelation:0 "Bozhestvennoe Otkrovenie"
+ egalitarianism:0 "Egalitarizm"
+ empiricism:0 "Empirizm"
+ enlightenment_thought:0 "Prosveshcheniye"
+ fascism:0 "Fashizm"
+ feminism:0 "Feminizm"
+ functionalism:0 "Funktsionalizm"
+ human_rights:0 "Prava Cheloveka"
+ idealism:0 "Idealizm"
+ identification_documents:0 "Udostovereniya Lichnosti"
+ international_relations:0 "Mezhdunarodnyye Otnosheniya"
+ international_trade:0 "Mezhdunarodnaya Torgovlya"
+ labor_movement:0 "Rabocheye Dvizheniye"
+ land_reform:0 "Zemelnaya Reforma"
+ law_enforcement:0 "Pravoobespechenie"
+ laws_of_physics:0 "Zakony Fiziki"
+ mass_communication:0 "Massovaya Kommunikatsiya"
+ mass_propaganda:0 "Massovaya Propaganda"
+ mass_surveillance:0 "Massovaya Slezhka"
+ nationalism:0 "Natsionalizm"
+ natural_selection:0 "Estestvennyy Otbor"
+ navigation:0 "Navigatsiya"
+ pan-nationalism:0 "Pan-Natsionalizm"
+ personal_liberty:0 "Lichnaya Svoboda"
+ philosophical_pragmatism:0 "Filosofskiy Pragmatizm"
+ political_agitation:0 "Politicheskaya Agitatsiya"
+ political_theory:0 "Politicheskaya Teoriya"
+ policing_by_consent:0 "Politsiya s Soglasiya Naroda"
+ popular_sovereignty:0 "Narodnyy Suverenitet"
+ power_of_the_purse:0 "Pravo Koshelka"
+ propaganda:0 "Propaganda"
+ rationalism:0 "Ratsionalizm"
+ rule_of_law:0 "Verkhovenstvo Zakona"
+ semaphore_signalling:0 "Semaforaya Signalizatsiya"
+ separation_of_powers:0 "Razdeleniye Vlastey"
+ socialism:0 "Sotsializm"
+ society:0 "Obshchestvo"
+ tech_bureaucracy:0 "Byurokratiya"
+ centralization:0 "Tsentralizatsiya"
+ urban_planning:0 "Gradostroitelstvo"
+ urbanization:0 "Urbanizatsiya"
+
+ ########################################
+ # ARTS & CULTURE TECHNOLOGIES
+ ########################################
+ analytical_philosophy:0 "Analiticheskaya Filosofiya"
+ art_patronage:0 "Patronazh Iskusstva"
+ camera:0 "Fotokamera"
+ color_photography:0 "Tsvetnaya Fotografiya"
+ film:0 "Kinematograf"
+ impressionism:0 "Impressionizm"
+ musical_instruments:0 "Muzikalnyye Instrumenty"
+ neoclassicism:0 "Neoklassitsizm"
+ organized_sports:0 "Organizovannyy Sport"
+ realism:0 "Realizm"
+ romanticism:0 "Romantizm"
+ zeppelins:0 "Tseppeliny"
+ radio:0 "Radio"
+
+ ########################################
+ # FINANCIAL TECHNOLOGIES
+ ########################################
+ academia:0 "Akademiya"
+ banking:0 "Bankovskoe Delo"
+ central_archives:0 "Tsentralnyy Arkhiv"
+ central_banking:0 "Tsentralnyy Bank"
+ corporate_charters:0 "Korporativnyye Ustavy"
+ corporate_management:0 "Korporativnoye Upravleniye"
+ currency_standards:0 "Valyutnye Standarty"
+ functionalism:0 "Funktsionalizm"
+ international_exchange_standards:0 "Mezhdunarodnyye Standarty Obmena"
+ investment_banks:0 "Investitsionnyye Banki"
+ joint_stock_companies:0 "Aktsionernyye Obshchestva"
+ macroeconomics:0 "Makroekonomika"
+ modern_financial_instruments:0 "Sovremennyye Finansovyye Instrumenty"
+ mutual_funds:0 "Payevye Investitsionnyye Fondy"
+ postal_savings:0 "Pochtovye Sberezheniya"
+ stock_exchange:0 "Fondovaya Birzha"
+
+ ########################################
+ # INFRASTRUCTURE TECHNOLOGIES
+ ########################################
+ floating_harbor:0 "Plavuchiy Dok"
+ modern_sewerage:0 "Sovremennaya Kanalizatsiya"
+ opium_dens:0 "Opiumnye Pritony"
+ sewage_systems:0 "Kanalizatsionnye Sistemy"
